@@ -1,0 +1,16 @@
+.home{
+    -fx-background-color: rgba(0, 0, 241, 0.72);
+    /*-fx-background-color: #0a0a5b;*/
+}
+
+.home-topic{
+    -fx-font-weight: bold;
+    -fx-font-family: Inter;
+    -fx-font-size: 20pt;
+}
+
+.jbutton{
+    -fx-background-color: rgba(0, 232, 131, 0.66);
+    /*-fx-background-color: #00E883;*/
+
+}
