@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anpItem" prefHeight="655.0" prefWidth="1000.0" styleClass="home" stylesheets="@../css/Item.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.ItemFormController">
+   <children>
+      <Text fill="WHITE" layoutX="449.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Form">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtItemCode" layoutX="87.0" layoutY="112.0" prefHeight="27.0" prefWidth="230.0" promptText="Enter item code" />
+      <Text fill="WHITE" layoutX="82.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item QtyOnHand :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtItemDesc" layoutX="535.0" layoutY="114.0" prefHeight="27.0" prefWidth="230.0" promptText="Enter item name" />
+      <Text fill="WHITE" layoutX="533.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Description :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="81.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Item Code:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtQtyOnHand" layoutX="83.0" layoutY="191.0" prefHeight="27.0" prefWidth="230.0" promptText="Enter qtyOnHand" />
+      <TextField fx:id="txtItemPrice" layoutX="531.0" layoutY="193.0" prefHeight="27.0" prefWidth="230.0" promptText="Enter item price" />
+      <Text fill="WHITE" layoutX="531.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Price :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+
+      <TableView fx:id="tblItem" layoutX="13.0" layoutY="253.0" prefHeight="387.0" prefWidth="567.0">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="103.7333173751831" text="Item code" />
+            <TableColumn fx:id="colItemDesc" prefWidth="173.86666870117188" text="Item Description" />
+            <TableColumn fx:id="colItemQtyOnHand" prefWidth="132.00003051757812" text="Item QtyOnHand" />
+            <TableColumn fx:id="colItemPrice" prefWidth="157.60000610351562" text="Item Price" />
+         </columns>
+      </TableView>
+
+      <JFXButton fx:id="btnSave" layoutX="610.0" layoutY="600.0" onAction="#btnSaveOnAction" prefHeight="34.0" prefWidth="115.0" style="-fx-background-radius: 10;" stylesheets="@../css/Item.css" text="Save">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icons8-save-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="jbutton" />
+            <String fx:value="buttonSave" />
+         </styleClass>
+      </JFXButton>
+
+      <JFXButton fx:id="btnDelete" layoutX="872.0" layoutY="599.0" onAction="#btnDeleteOnAction" prefHeight="34.0" prefWidth="115.0" style="-fx-background-radius: 10;" stylesheets="@../css/Item.css" text="Delete">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <styleClass>
+            <String fx:value="jbutton" />
+            <String fx:value="buttonDelete" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icons8-delete-30.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+
+      <JFXButton fx:id="btnUpdate" layoutX="741.0" layoutY="602.0" onAction="#btnUpdateOnAction" prefHeight="34.0" prefWidth="115.0" style="-fx-background-radius: 10;" stylesheets="@../css/Item.css" text="Update">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icons8-update-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="jbutton" />
+            <String fx:value="buttonUpdate" />
+         </styleClass>
+      </JFXButton>
+      <ImageView fitHeight="348.0" fitWidth="379.0" layoutX="605.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Screenshot_2024-09-23_012240-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnBack" layoutX="14.0" layoutY="14.0" onAction="#btnBackOnAction" style="-fx-background-radius: 15;" stylesheets="@../css/Customer.css" text="Back">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icons8-home-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <styleClass>
+            <String fx:value="jbutton" />
+            <String fx:value="buttonBack" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+
+   </children>
+</AnchorPane>

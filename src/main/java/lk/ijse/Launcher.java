@@ -12,9 +12,8 @@ public class Launcher extends Application {
     }
 
     public void start(Stage stage) throws Exception {
-        stage.setScene(new Scene(FXMLLoader
-                .load(this.getClass().getResource("/view/CustomerForm.fxml"))));
-        stage.setTitle("Login Form");
+        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/HomeForm.fxml"))));
+        stage.setTitle("Home Form");
         stage.centerOnScreen();
         stage.show();
     }

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:id="anpHome" prefHeight="400.0" prefWidth="600.0" styleClass="home" stylesheets="@../css/Home.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.HomeFormController">
+   <children>
+      <ImageView fitHeight="95.0" fitWidth="177.0" layoutX="226.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Screenshot_2024-09-22_231130-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Text fill="#faf7f7" layoutX="223.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
+         <font>
+            <Font name="Calibri Bold" size="35.0" />
+         </font>
+      </Text>
+      <Line endX="316.0" endY="-1.52587890625E-5" layoutX="284.0" layoutY="72.0" startX="-284.0" startY="-1.52587890625E-5" stroke="#cb80ab" strokeWidth="2.0" />
+      <ImageView fitHeight="104.0" fitWidth="134.0" layoutX="14.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Screenshot_2024-09-23_000319-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnCustomer" layoutX="29.0" layoutY="249.0" onAction="#btnCustomerOnAction" prefHeight="27.0" prefWidth="96.0" stylesheets="@../css/Home.css" text="Customer">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <styleClass>
+            <String fx:value="jbutton" />
+            <String fx:value="button" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text fill="WHITE" layoutX="214.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright By 2003 DilmiKavishka" />
+      <ImageView fitHeight="104.0" fitWidth="107.0" layoutX="247.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Screenshot_2024-09-23_000819-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnItem" layoutX="253.0" layoutY="249.0" onAction="#btnItemOnAction" prefHeight="27.0" prefWidth="96.0" stylesheets="@../css/Home.css" text="Item">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <styleClass>
+            <String fx:value="jbutton" />
+            <String fx:value="button" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="122.0" fitWidth="148.0" layoutX="429.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Screenshot_2024-09-22_230943-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnPlaceOrder" layoutX="448.0" layoutY="249.0" onAction="#btnPlaceOrderOnAction" prefHeight="27.0" prefWidth="96.0" stylesheets="@../css/Home.css" text="Place order">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <styleClass>
+            <String fx:value="jbutton" />
+            <String fx:value="button" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

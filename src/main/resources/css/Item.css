@@ -11,12 +11,10 @@
 
 .jbutton{
     -fx-background-color: #D9ABAB;
+    /*-fx-background-color: #00E883;*/
 
 }
 
-.buttonBack:hover{
-    -fx-background-color: #F1E5D1;
-}
 .buttonSave:hover{
     -fx-background-color: #90D26D;
 }

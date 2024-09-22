@@ -1,60 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="533.0" prefWidth="795.0" styleClass="home" stylesheets="@../css/Customer.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.CustomerFormController">
+<AnchorPane prefHeight="655.0" prefWidth="1000.0" styleClass="home" stylesheets="@../css/Customer.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.CustomerFormController">
    <children>
-      <Text fill="WHITE" layoutX="269.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Form">
+      <Text fill="WHITE" layoutX="375.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Form">
          <font>
-            <Font name="System Bold" size="25.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Text>
-      <TextField fx:id="txtCustomerId" layoutX="50.0" layoutY="144.0" prefHeight="27.0" prefWidth="230.0" promptText="Enter Id" />
-      <Text fill="WHITE" layoutX="47.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Address:">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Text>
-      <TextField fx:id="txtCustomerName" layoutX="49.0" layoutY="234.0" prefHeight="27.0" prefWidth="230.0" promptText="Enter Name" />
-      <Text fill="WHITE" layoutX="46.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name :">
+      <TextField fx:id="txtCustomerId" layoutX="70.0" layoutY="127.0" prefHeight="27.0" prefWidth="230.0" promptText="Enter Id" />
+      <Text fill="WHITE" layoutX="718.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Address:">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="46.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Id:">
+      <TextField fx:id="txtCustomerName" layoutX="386.0" layoutY="127.0" prefHeight="27.0" prefWidth="230.0" promptText="Enter Name" />
+      <Text fill="WHITE" layoutX="388.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="73.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Id:">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
 
-      <TextField fx:id="txtCustomerAddress" layoutX="49.0" layoutY="312.0" prefHeight="27.0" prefWidth="230.0" promptText="Enter Address" />
-      <JFXButton fx:id="btnSave" layoutX="103.0" layoutY="365.0" onAction="#btnSaveOnAction" prefHeight="34.0" prefWidth="115.0" styleClass="jbutton" stylesheets="@../css/Customer.css" text="Save">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </JFXButton>
-      <TableView fx:id="tblCustomer" layoutX="306.0" layoutY="105.0" prefHeight="352.0" prefWidth="474.0">
+      <TextField fx:id="txtCustomerAddress" layoutX="715.0" layoutY="127.0" prefHeight="27.0" prefWidth="230.0" promptText="Enter Address" />
+      <TableView fx:id="tblCustomer" layoutX="13.0" layoutY="185.0" prefHeight="454.0" prefWidth="554.0">
         <columns>
-          <TableColumn fx:id="colCustomerId" prefWidth="93.60003662109375" text="Customer Id" />
-          <TableColumn fx:id="colCustomerName" prefWidth="144.79998779296875" text="Customer Name" />
-            <TableColumn fx:id="colCustomerAddress" prefWidth="180.0" text="Customer Address" />
+          <TableColumn fx:id="colCustomerId" prefWidth="120.00003337860107" text="Customer Id" />
+          <TableColumn fx:id="colCustomerName" prefWidth="195.9999542236328" text="Customer Name" />
+            <TableColumn fx:id="colCustomerAddress" prefWidth="238.4000244140625" text="Customer Address" />
         </columns>
       </TableView>
-      <JFXButton fx:id="btnDelete" layoutX="103.0" layoutY="422.0" onAction="#btnDeleteOnAction" prefHeight="34.0" prefWidth="115.0" styleClass="jbutton" stylesheets="@../css/Customer.css" text="Delete">
+      <JFXButton fx:id="btnSave" layoutX="596.0" layoutY="603.0" onAction="#btnSaveOnAction" prefHeight="34.0" prefWidth="115.0" style="-fx-background-radius: 10;" stylesheets="@../css/Item.css" text="Save">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icons8-save-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="jbutton" />
+            <String fx:value="buttonSave" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
-      <JFXButton fx:id="btnUpdate" layoutX="103.0" layoutY="484.0" onAction="#btnUpdateOnAction" prefHeight="34.0" prefWidth="115.0" styleClass="jbutton" stylesheets="@../css/Customer.css" text="Update">
+      <JFXButton fx:id="btnDelete" layoutX="848.0" layoutY="606.0" onAction="#btnDeleteOnAction" prefHeight="34.0" prefWidth="115.0" style="-fx-background-radius: 10;" stylesheets="@../css/Item.css" text="Delete">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+         <styleClass>
+            <String fx:value="jbutton" />
+            <String fx:value="buttonDelete" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icons8-delete-30.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="722.0" layoutY="605.0" onAction="#btnUpdateOnAction" prefHeight="34.0" prefWidth="115.0" style="-fx-background-radius: 10;" stylesheets="@../css/Item.css" text="Update">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icons8-update-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="jbutton" />
+            <String fx:value="buttonUpdate" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="348.0" fitWidth="379.0" layoutX="596.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Screenshot_2024-09-23_000347-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnBack" layoutX="12.0" layoutY="12.0" onAction="#btnBackOnAction" style="-fx-background-radius: 15;" stylesheets="@../css/Customer.css" text="Back">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icons8-home-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <styleClass>
+            <String fx:value="jbutton" />
+            <String fx:value="buttonBack" />
+         </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
    </children>
 </AnchorPane>
