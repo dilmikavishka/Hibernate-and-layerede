@@ -5,6 +5,7 @@ import lk.ijse.DAO.DAOFactory;
 import lk.ijse.DAO.custome.CustomerDAO;
 import lk.ijse.DTO.CustomerDTO;
 import lk.ijse.Entity.Customer;
+import lombok.SneakyThrows;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -41,4 +42,16 @@ public class CustomerBOImpl implements CustomerBO {
     public String generateNextIdCustomer() throws SQLException, ClassNotFoundException {
         return customerDAO.generateNextId();
     }
+
+
+    @Override
+    public CustomerDTO searchByIdCustomer(String id) throws SQLException, ClassNotFoundException {
+        Customer customer = customerDAO.searchById(id);
+        CustomerDTO result = new CustomerDTO();
+        result.setId(customer.getId());
+        result.setName(customer.getName());
+        result.setAddress(customer.getAddress());
+        return  result;
+    }
+
 }

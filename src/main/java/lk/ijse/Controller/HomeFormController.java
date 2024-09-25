@@ -53,7 +53,7 @@ public class HomeFormController {
     void btnPlaceOrderOnAction(ActionEvent event) throws IOException {
         Stage stage;
         stage = (Stage) btnItem.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/ItemForm.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/PlaceOrderForm.fxml"))));
         stage.setTitle("PlaceOrder Form");
         stage.centerOnScreen();
         stage.show();

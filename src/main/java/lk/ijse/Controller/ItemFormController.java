@@ -89,7 +89,7 @@ public class ItemFormController {
     private void loadAllItem() {
         ObservableList<ItemTm> obList = FXCollections.observableArrayList();
         try {
-            List<ItemDTO> itemList = itemBO.getAllItem();
+            List<ItemDTO> itemList = itemBO.  getAllItem();
             for(ItemDTO item : itemList){
                 ItemTm tm = new ItemTm(item.getItemCode(),item.getItemDesc(),item.getQtyOnHand(),item.getItemPrice());
                 obList.add(tm);
@@ -181,6 +181,29 @@ public class ItemFormController {
         stage.setTitle("Home Form");
         stage.centerOnScreen();
         stage.show();
+    }
+
+
+    @FXML
+    void txtItemSearchOnAction(ActionEvent event) {
+        String code = txtItemCode.getText();
+
+        ItemDTO item = null;
+        try {
+            item = itemBO.searchByItemCode(code);
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+
+        if (item != null) {
+            txtItemCode.setText(item.getItemCode());
+            txtItemDesc.setText(item.getItemDesc());
+            txtQtyOnHand.setText(String.valueOf(item.getQtyOnHand()));
+            txtItemPrice.setText(String.valueOf(item.getItemPrice()));
+
+        }else {
+            new Alert(Alert.AlertType.INFORMATION,"item is not found !").show();
+        }
     }
 
 }

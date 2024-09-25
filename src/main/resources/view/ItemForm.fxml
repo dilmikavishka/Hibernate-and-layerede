@@ -19,7 +19,7 @@
             <Font name="System Bold" size="35.0" />
          </font>
       </Text>
-      <TextField fx:id="txtItemCode" layoutX="87.0" layoutY="112.0" prefHeight="27.0" prefWidth="230.0" promptText="Enter item code" />
+      <TextField fx:id="txtItemCode" layoutX="87.0" layoutY="112.0" onAction="#txtItemSearchOnAction" prefHeight="27.0" prefWidth="230.0" promptText="Enter item code" />
       <Text fill="WHITE" layoutX="82.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item QtyOnHand :">
          <font>
             <Font size="15.0" />

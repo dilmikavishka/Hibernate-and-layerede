@@ -161,5 +161,25 @@ public class CustomerFormController{
         stage.show();
     }
 
+    @FXML
+    void txtSearchCustomerOnAction(ActionEvent event) {
+        String id = txtCustomerId.getText();
+
+        CustomerDTO customer = null;
+        try {
+            customer = customerBO.searchByIdCustomer(id);
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+
+        if (customer != null) {
+            txtCustomerId.setText(customer.getId());
+            txtCustomerName.setText(customer.getName());
+            txtCustomerAddress.setText(customer.getAddress());
+
+        }else {
+            new Alert(Alert.AlertType.INFORMATION,"customer is not found !").show();
+        }
+    }
 
 }

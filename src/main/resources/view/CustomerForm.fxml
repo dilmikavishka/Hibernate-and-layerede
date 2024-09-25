@@ -19,7 +19,7 @@
             <Font name="System Bold" size="35.0" />
          </font>
       </Text>
-      <TextField fx:id="txtCustomerId" layoutX="70.0" layoutY="127.0" prefHeight="27.0" prefWidth="230.0" promptText="Enter Id" />
+      <TextField fx:id="txtCustomerId" layoutX="70.0" layoutY="127.0" onAction="#txtSearchCustomerOnAction" prefHeight="27.0" prefWidth="230.0" promptText="Enter Id" />
       <Text fill="WHITE" layoutX="718.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Address:">
          <font>
             <Font size="15.0" />

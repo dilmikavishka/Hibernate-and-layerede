@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ItemDAOImpl implements ItemDAO {
@@ -78,5 +79,44 @@ public class ItemDAOImpl implements ItemDAO {
         transaction.commit();
         session.close();
         return nextId;
+    }
+
+    @Override
+    public Item searchById(String id) throws SQLException, ClassNotFoundException {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Item item = session.get(Item.class, id);
+        transaction.commit();
+        session.close();
+        return item;
+    }
+
+
+    @Override
+    public List<String> getItemCode() {
+        Session session = null;
+        Transaction transaction = null;
+        List<String> itemCode = new ArrayList<>();
+
+        try {
+            session = FactoryConfiguration.getInstance().getSession();
+            transaction = session.beginTransaction();
+
+            // Use HQL to fetch only the customer IDs
+            itemCode = session.createQuery("SELECT i.id FROM Item i", String.class).list();
+
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+        return itemCode;
     }
 }

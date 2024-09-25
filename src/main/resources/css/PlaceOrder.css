@@ -1,0 +1,13 @@
+.home{
+    -fx-background-color: rgb(248, 74, 164);
+    /*-fx-background-color: #0a0a5b;*/
+}
+.jbutton{
+    -fx-background-color: #D9ABAB;
+    /*-fx-background-color: #00E883;*/
+
+}
+
+.button:hover{
+    -fx-background-color: #F1E5D1;
+}
